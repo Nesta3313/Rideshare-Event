@@ -1,0 +1,4 @@
+azure-eventhub==5.11.7
+python-dotenv==1.0.1
+faker==33.1.0
+rich==13.9.4
