@@ -197,8 +197,8 @@ class RideshareProducer:
             self._reconnect_attempt = 0
             logger.info(
                 "Connected to Event Hub '%s' (partitions: %s)",
-                props["name"],
-                props["partition_ids"],
+                self._config.eventhub_name,
+                props.get("partition_ids", "unknown"),
             )
         except EventHubError as exc:
             self._connected = False
